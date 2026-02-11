@@ -1,21 +1,29 @@
 import java.util.Scanner;
+public class AreaCalculator{
 
-public class AreaCalculator {
-    
-    // TODO: Define calculateArea(float radius) -> returns area of circle
-    // Use Math.PI or 3.14159f for pi
+	static void calculatearea(float radius){
+		double carea=Math.PI*radius*radius;
+		System.out.println(String.format("%.2f",carea));
+	}
+	static void calculatearea(float length,float breadth){
+		double rarea=length*breadth;
+		System.out.println(String.format("%.2f",rarea));
+	}
+	static void calculatearea(double base,double height){
+		double tarea=0.5*base*height;
+		System.out.println(String.format("%.2f",tarea));
+	}
+    	public static void main(String[] args){
+        	Scanner sc=new Scanner(System.in);
+        	float r=sc.nextFloat();
+        	float l=sc.nextFloat();
+        	float b=sc.nextFloat();
+        	double ba=sc.nextDouble();
+        	double h=sc.nextDouble();
 
-    // TODO: Define calculateArea(float length, float breadth) -> returns area of rectangle
-
-    // TODO: Define calculateArea(double base, double height) -> returns area of triangle
-
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        // TODO: Read input for Circle (radius)
-        // TODO: Read input for Rectangle (length, breadth)
-        // TODO: Read input for Triangle (base, height)
-        
-        // TODO: Call methods and print results formatted to 2 decimal places
-        // Hint: Use System.out.printf("%.2f\n", area);
-    }
+		calculatearea(r);
+		calculatearea(l,b);
+		calculatearea(ba,h);
+		
+       	}
 }
